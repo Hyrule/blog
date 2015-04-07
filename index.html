@@ -1,17 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Blog</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="blog.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Blog</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="blog.css">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<div class="cabecera">
+		<nav class="navespacio navbar navbar-default">
+			<div id="cf" class="container-fluid">
+				<ul id="lista" class="nav navbar-nav">
+					<li><a class="blognavitem" href="">Home</a></li>
+					<li><a class="blognavitem" href="">New Features</a></li>
+					<li><a class="blognavitem" href="">Press</a></li>
+					<li><a class="blognavitem" href="">New hires</a></li>
+					<li><a class="blognavitem" href="">About</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container">
+		<header>
+			<h1>The Bootstrap Blog</h1>
+			<h4>The official example template of creating a blog with Bootstrap.</h4>
+		</header>
+		<div class="row">
+			<div class="col-sm-8 blogmain">
+				<div class="blogpost">
+					<h2 class="blogposttitle">POST 1</h2>
+					<p class="postfecha">1st March 2015 by <a href="#">Irene</a></p>
+					<p class="postcontent">
+						Contenido del post uno: Esta es una historia triste, de exclusión, pobreza, paro, precariedad laboral…, de desigualdad, en definitiva. La historia empezó a agravarse en 2008 y se disparó entre 2010 y 2014, por la crisis económica y los recortes sociales, pero llevaba muchos años instalada en la sociedad española, escondida tras la borrachera provocada por la bonanza económica, la burbuja inmobiliaria y el consumo disparado a golpe de crédito. La pobreza existía en España en las ciudades, en los pueblos y en las aldeas, pero no nos dábamos cuenta a pesar de los avisos de organizaciones humanitarias como Cáritas, Intermón-Oxfam o Cruz Roja. Los pobres eran invisibles. Además, pensábamos que era solo cosa de inmigrantes. Estábamos muy ocupados disfrutando de unos años boyantes y los políticos habían dejado de pisar la calle, para gobernar desde la moqueta y el coche oficial.
+					</p>
+				</div>
+				<div class="blogpost">
+					<h2 class="blogposttitle">POST 2</h2>
+					<p class="postfecha">28ht February 2015 by <a href="#">Hyrule</a></p>
+					<p class="postcontent">
+						Contenido del post 2: Mientras tanto, las calles se llenaban de personas sin techo que dormían en soportales o túneles, los comedores sociales no daban abasto y las familias iban acabando con su hucha y no podían ya ser la red de apoyo de sus hijos, hermanos o nietos que dejaron de cobrar las prestaciones sociales.
+					</p>
+				</div>
+				<div class="blogpost">
+					<h2 class="blogposttitle">POST 3</h2>
+					<p class="postfecha">5 February 2015 by <a href="#">Admin</a></p>
+					<p class="postcontent">
+						Mientras tanto, las calles se llenaban de personas sin techo que dormían en soportales o túneles, los comedores sociales no daban abasto y las familias iban acabando con su hucha y no podían ya ser la red de apoyo de sus hijos, hermanos o nietos que dejaron de cobrar las prestaciones sociales.
+						Pero en el año con más citas electorales desde que estrenamos democracia (andaluzas, autonómicas, locales, catalanas y generales), los partidos políticos parece que se han dado cuenta de la gravedad de la situación y empiezan a incluir en sus programas preelectorales diversas medidas para atajar la situación. Son conscientes de que, ante este panorama de auténtica emergencia nacional, o proponen cambios de peso en la política económica y social o se exponen a una revolución. Incluso en el debate sobre el estado de la nación de esta semana la desigualdad ha sido uno de los asuntos más citados.
+					</p>
+				</div>
+				<nav class="">
+					<ul ="pager">
+						<li><a href="#">Previous</a></li>
+						<li><a href="#">Next</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+				<div class="sidebar-module sidebar-module-inset">
+					<h4>About</h4>
+					<p>Information about this blog is available here. A little explanation of its content.</p>
+				</div>
+				<div class="sidebar-module">
+					<h4>Archives</h4>
+					<ol class="unstyles-list">
+						<li><a href="">January 2015</a></li>
+						<li><a href="">December 2014</a></li>
+						<li><a href="">November 2014</a></li>
+						<li><a href="">October 2014</a></li>
+						<li><a href="">September 2014</a></li>
+						<li><a href="">August 2014</a></li>
+						<li><a href="">July 2014</a></li>
+					</ol>
+				</div>
+				<div class="sidebar-module">
+					<h4>Elsewhere</h4>
+					<ol>
+						<li><a href="">Github</a></li>
+						<li><a href="">Facebook</a></li>
+						<li><a href="">Twitter</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="panel-footer">
+		
+		<div class="text-center">
+			<p>Blog template built using <a href="www.getbootstrap.com">Bootstrap</a> by <a href="www.twitter.com/Hyrue_">@Hyrule_</a>.</p>
+			<p><a href="#">Back top</a></p>
+		</div>
+		
+	</footer>
+
+
+	<script src="jquery-1.11.2/jquery-1.11.2.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
