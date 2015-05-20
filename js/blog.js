@@ -10,6 +10,15 @@ $(function() {
 	var Blogs = Parse.Collection.extend({
 		model: Blog
 	});
+
+	var BlogsView =  Parse.View.extend({
+    	template: Handlebars.compile($('#blogs-tpl').html()),
+    	render: function(){ 
+        	var collection = { blog: this.collection.toJSON() };
+        	this.$el.html(this.template(collection));
+    	}
+	});
+	
 	var blogs = new Blogs();
 	blogs.fetch({
 		success: function(blogs){
@@ -23,13 +32,7 @@ $(function() {
 		}
 	});
 
-	var BlogsView =  Parse.View.extend({
-    	template: Handlebars.compile($('#blogs-tpl').html()),
-    	render: function(){ 
-        	var collection = { blog: this.collection.toJSON() };
-        	this.$el.html(this.template(collection));
-    	}
-	});
+	
 
     /*
     var TestObject = Parse.Object.extend("TestObject");
