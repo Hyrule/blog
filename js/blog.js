@@ -11,11 +11,11 @@ $(function() {
 		model: Blog
 	});
 	var blogs = new Blogs();
-		blogs.fetch({
-			success: function(blogs){
+	blogs.fetch({
+		success: function(blogs){
 			console.log(blogs);
 		},
-			error: function(blogs, error){
+		error: function(blogs, error){
 			console.log(error);
 		}
 	});
