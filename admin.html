@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Blog</title>
+	<title>Blog-Admin</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="blog.css">
 </head>
@@ -13,8 +13,8 @@
 		<div class="container">
 			<nav class="blog-nav">
 				<ul class="blog-nav-ul">
-					<li><a class="blog-nav-item active" href="index.html">Home</a></li>
-					<li><a class="blog-nav-item" href="admin.html">Admin</a></li>
+					<li><a class="blog-nav-item" href="index.html">Home</a></li>
+					<li><a class="blog-nav-item active" href="admin.html">Admin</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -28,15 +28,21 @@
 		<div class="row">
 			<div class="col-sm-8 blog-main">
 				<div class="main-container">
-					<script id="blogs-tpl" type="text/x-handlebars-template">
-						{{#each blog}}
-						<div class="blog-post">
-							<h2 class="blog-post-title"><a href="">{{title}}</a></h2>
-							<p class="post-fecha">A time by Author</p>
-							<div>{{{content}}}</div>
-						</div>
-						{{/each}}
-					</script>
+
+					<form class="form-signin">
+        				<h2 class="form-signin-heading">Please sign in</h2>
+        				<label for="inputEmail" class="sr-only">Email address</label>
+        				<input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+        				<label for="inputPassword" class="sr-only">Password</label>
+        				<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        				
+        				<!--<div class="checkbox">
+          					<label>
+            					<input type="checkbox" value="remember-me"> Remember me
+          					</label>
+        				</div>-->
+        				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      				</form>
 				</div>
 			</div>
 
@@ -85,6 +91,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script src="js/blog.js"></script>
+	<script src="js/admin.js"></script>
 </body>
 </html>
