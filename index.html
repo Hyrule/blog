@@ -30,35 +30,20 @@
 		</header>
 		<div class="row">
 			<div class="col-sm-8 blog-main">
-				<div class="blog-post">
-					<h2 class="blog-post-title">POST 1</h2>
-					<p class="post-fecha">1st March 2015 by <a href="#">Irene</a></p>
-					<p class="post-content">
-						Contenido del post uno: Esta es una historia triste, de exclusión, pobreza, paro, precariedad laboral…, de desigualdad, en definitiva. La historia empezó a agravarse en 2008 y se disparó entre 2010 y 2014, por la crisis económica y los recortes sociales, pero llevaba muchos años instalada en la sociedad española, escondida tras la borrachera provocada por la bonanza económica, la burbuja inmobiliaria y el consumo disparado a golpe de crédito. La pobreza existía en España en las ciudades, en los pueblos y en las aldeas, pero no nos dábamos cuenta a pesar de los avisos de organizaciones humanitarias como Cáritas, Intermón-Oxfam o Cruz Roja. Los pobres eran invisibles. Además, pensábamos que era solo cosa de inmigrantes. Estábamos muy ocupados disfrutando de unos años boyantes y los políticos habían dejado de pisar la calle, para gobernar desde la moqueta y el coche oficial.
-					</p>
+				<div class="main-container">
+					<script id="blogs-tpl" type="text/x-handlebars-template">
+						{{#each blog}}
+						<div class="blog-post">
+							<h2 class="blog-post-title"><a href="">{{title}}</a></h2>
+							<p class="post-fecha">A time by Author</p>
+							<div>{{{content}}}</div>
+						</div>
+						{{/each}}
+					</script>
 				</div>
-				<div class="blog-post">
-					<h2 class="blog-post-title">POST 2</h2>
-					<p class="post-fecha">28ht February 2015 by <a href="#">Hyrule</a></p>
-					<p class="post-content">
-						Contenido del post 2: Mientras tanto, las calles se llenaban de personas sin techo que dormían en soportales o túneles, los comedores sociales no daban abasto y las familias iban acabando con su hucha y no podían ya ser la red de apoyo de sus hijos, hermanos o nietos que dejaron de cobrar las prestaciones sociales.
-					</p>
-				</div>
-				<div class="blog-post">
-					<h2 class="blog-post-title">POST 3</h2>
-					<p class="post-fecha">5 February 2015 by <a href="#">Admin</a></p>
-					<p class="post-content">
-						Mientras tanto, las calles se llenaban de personas sin techo que dormían en soportales o túneles, los comedores sociales no daban abasto y las familias iban acabando con su hucha y no podían ya ser la red de apoyo de sus hijos, hermanos o nietos que dejaron de cobrar las prestaciones sociales.
-						Pero en el año con más citas electorales desde que estrenamos democracia (andaluzas, autonómicas, locales, catalanas y generales), los partidos políticos parece que se han dado cuenta de la gravedad de la situación y empiezan a incluir en sus programas preelectorales diversas medidas para atajar la situación. Son conscientes de que, ante este panorama de auténtica emergencia nacional, o proponen cambios de peso en la política económica y social o se exponen a una revolución. Incluso en el debate sobre el estado de la nación de esta semana la desigualdad ha sido uno de los asuntos más citados.
-					</p>
-				</div>
-				<nav>
-					<ul class="pager">
-						<li><a href="#">Previous</a></li>
-						<li><a href="#">Next</a></li>
-					</ul>
-				</nav>
 			</div>
+
+
 			<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
 				<div class="sidebar-module sidebar-module-inset">
 					<h4>About</h4>
@@ -100,6 +85,7 @@
 
 	<script src="jquery-1.11.2/jquery-1.11.2.js"></script>
 	<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.amd.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="js/blog.js"></script>
 </body>
