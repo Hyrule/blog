@@ -25,9 +25,66 @@ $(function() {
 
  	});
 */
+	var Blog = Parse.Object.extend('Blog', {
+		create : function(title, content){
+			var cd = new Date();
+			var t = cd.getUTC
+			var d= cd.getDate();
+			var m=cd.getMonth()+1;
+			var y=cd.getFullYear();
+			var ajuste = -1*cd.getTimezoneOffset()/60;
+			var h=cd.getUTCHours();
+			var min=cd.getUTCMinutes();
+			var sec=cd.getUTCSeconds();
+			var tiempo = ( h + ajuste)+":"+min+":"+sec;
+			var fecha = d+"/"+m+"/"+y+" at "+( h + ajuste)+":"+min;
+			this.save({
+				'title' : title,
+				'content' : content,
+				'author' : Parse.User.current(),
+				'authorName' : Parse.User.current().get('username'),
+				'time' : fecha//new Date().toDateString()
+			},{
+				success : function(blog){
+					alert("You added a new post: " + blog.get('title'));
+				},
+				error : function(blog, error){
+					console.log(blog);
+					console.log(error);
+				}
+			});
+		}
+	});
+
+	var AddBlogView = Parse.View.extend({
+		template : Handlebars.compile($('#add-tpl').html()),
+		events : {
+			'submit .form-add' : 'submit'
+		},
+		submit : function(e){
+			//submit new post
+			e.preventDefault();
+			var data = $(e.target).serializeArray(),
+				//Create a new isntace of blog
+				blog = new Blog();
+				//call .create()
+				blog.create(data[0].value,data[1].value);
+		},
+		render : function(){
+			this.$el.html(this.template());
+		}
+	});
 
 	var WelcomeView = Parse.View.extend({
         template: Handlebars.compile($('#welcome-tpl').html()),
+        events : {
+			'click .add-blog' : 'add'
+		},
+		add : function(){
+			var addBlogView = new AddBlogView();
+		    addBlogView.render();
+		    $('.main-container').html(addBlogView.el);
+		},
         render: function(){
             var attributes = this.model.toJSON();
             this.$el.html(this.template(attributes));
@@ -76,6 +133,7 @@ $(function() {
 	loginView.render();
 	$('.main-container').html(loginView.el);
 
+	
 
 
 	/*

@@ -6,7 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Blog-Admin</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!--<link href="css/bootstrap3-wysihtml5.min.css" rel="stylesheet">-->
 	<link rel="stylesheet" type="text/css" href="blog.css">
+	
 </head>
 <body>
 	<div class="blog-masthead">
@@ -41,7 +43,24 @@
 	      			</script>
 	      			<script id="welcome-tpl" type="text/x-handlebars-template">
 	      				<h2>Welcome, {{username}}!</h2>
+	      				<button class="add-blog btn btn-lg btn-primary">Add a New Post</button>
 	      			</script>
+
+	      			<script type="text/x-handlebars-template" id="add-tpl">
+						<h2>Adding a New Blog</h2>
+						 
+						<form class="form-add" role="form">
+						    <div class="form-group">
+						      <label for="title">Title</label>
+						      <input type="text" name="title" class="form-control" id="title" placeholder="Enter Your Post Title">
+						    </div>
+						    <div class="form-group">
+						      <label for="content">Content</label>
+						      <textarea name="content" class="form-control" rows="20"></textarea>
+						    </div>
+						    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+						</form>
+					</script>
 				</div>
 			</div>
 
@@ -87,9 +106,12 @@
 
 	<script src="jquery-1.11.2/jquery-1.11.2.js"></script>
 	<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+	<!--<script src="js/bootstrap3-wysihtml5.all.min.js"></script>
+	<script src="js/bootstrap3-wysihtml5.min.js"></script>-->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="js/admin.js"></script>
+	
+
 </body>
 </html>
